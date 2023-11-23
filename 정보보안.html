@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소프트웨어 과제</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* 이미지 스타일링 */
+        #article img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px; /* 이미지 간격을 조절 */
+        }
+    </style>
+</head>
+<body>
+
+    <h1><a href="책 추천 사이트.html">전공 도서 추천</a></h1>
+
+    <div id="grid">
+        <ol>
+            <li><a href="게임개발.html">게임 개발</a></li>
+            <li><a href="빅데이터.html">빅데이터</a></li>
+            <li><a href="인공지능.html">인공지능</a></li>
+            <li><a href="정보보안.html">정보보안</a></li>
+        </ol>
+
+        <div id="article">
+            <h2>정보 보안</h2>
+            <p>정보 보안 관련 도서 입니다.</p>
+
+            <!-- 이미지 추가 -->
+            <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791187007722.jpg" alt="책 이미지">
+           
+        </div>
+    </div>
+
+    <script>
+        // 이미지 배열
+        var images = [
+        "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791187007722.jpg",
+        "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbu65gj%2FbtqAdcl0ytf%2FK0IEgDbm0Hr5EskqneJkc1%2Fimg.jpg",
+        "https://image.yes24.com/goods/90557317/XL",
+        "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcHtawm%2FbtqAgTSQvbn%2FJeW4xKg2knP49yNiU7piB0%2Fimg.jpg",
+        "https://image.yes24.com/goods/112200347/L",
+        "https://image.yes24.com/goods/121552667/L",
+        "https://image.yes24.com/goods/119423307/L",
+        "https://image.yes24.com/goods/119050180/L"
+        ];
+
+        var currentImageIndex = 0;
+        var imageElement = document.querySelector("#article img");
+
+        // 초기 이미지 설정
+        imageElement.src = images[currentImageIndex];
+
+        // 다음 이미지 보여주기
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            imageElement.src = images[currentImageIndex];
+        }
+
+        // 이미지 클릭 시 다음 이미지 보여주기
+        imageElement.addEventListener("click", showNextImage);
+    </script>
+
+</body>
+</html>

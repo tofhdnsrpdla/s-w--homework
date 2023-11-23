@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    background-color: #ffc107;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+#grid {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+#article {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#article h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#article p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 추가적으로 이미지 스타일링 */
+#article img {
+    max-width: 100%; /* 부모 요소에 맞게 이미지 크기 조절 */
+    height: auto;
+    display: block; /* 인라인 요소 간의 여백 제거 */
+    margin: 0 auto 20px; /* 이미지 하단에 여백 추가 및 가운데 정렬 */
+}

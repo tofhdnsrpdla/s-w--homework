@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소프트웨어 과제</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 이미지 스타일링 */
+        #article img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px; /* 이미지 간격을 조절 */
+        }
+    </style> 
+</head>
+<body>
+
+    <h1><a href="책 추천 사이트.html">전공 도서 추천</a></h1>
+
+    <div id="grid">
+        <ol>
+            <li><a href="게임개발.html">게임 개발</a></li>
+            <li><a href="빅데이터.html">빅데이터</a></li>
+            <li><a href="인공지능.html">인공지능</a></li>
+            <li><a href="정보보안.html">정보보안</a></li>
+        </ol>
+
+        <div id="article">
+            <h2>빅데이터</h2>
+            <p>빅데이터 추천 도서 입니다.</p>
+
+            <!-- 이미지 추가 -->
+            <img src="https://shopping-phinf.pstatic.net/main_3246670/32466700693.20221231084010.jpg?type=w300" alt="책 이미지">
+        </div>
+    </div>
+
+    <script>
+        // 이미지 배열
+        var images = [
+            "https://shopping-phinf.pstatic.net/main_3246670/32466700693.20221231084010.jpg?type=w300",
+            "https://post-phinf.pstatic.net/MjAyMDA1MjFfMTg2/MDAxNTkwMDIwMTMxMTI0.YjBGr_JTCOObOo0Smqkgoim1cOjL-QX1hGsbZh3qUDUg.9qn4fotG_XCcriTFLBPArS_lgbrp48JUDiUQVyAsNTIg.JPEG/%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0.jpg?type=w1200",
+            "https://post-phinf.pstatic.net/MjAyMDA1MjFfMTc2/MDAxNTkwMDE5MjgxNTg1.1w3uBdUYN0XNp6rpSGVPe823R4eG1d-fBD_eHN5QrCQg.DbFw809fs4qFSHznVV_xGGi9Co5vPyecn9FPONYxV5kg.JPEG/8956748500_1.jpg?type=w1200",
+            "https://post-phinf.pstatic.net/MjAyMDA1MjFfMTkz/MDAxNTkwMDE5MjY3OTc0.hWFs2bDy0Y4uNkOYjEHlUA-DCwPQUqWfxf1Upd7C6ZQg.reVqFYvJN5XmcJO3V4gwzVyWle-28zXNhK2g2oq5dHog.JPEG/8956747989_1.jpg?type=w1200",
+            "https://shopping-phinf.pstatic.net/main_3249398/32493984739.20221228074951.jpg?type=w300",
+            "https://shopping-phinf.pstatic.net/main_3249049/32490492820.20220527073419.jpg?type=w300",
+            "https://shopping-phinf.pstatic.net/main_3249754/32497548194.20220527043301.jpg?type=w300",
+            "https://shopping-phinf.pstatic.net/main_3245493/32454938919.20230905101253.jpg?type=w300"
+        ];
+
+        var currentImageIndex = 0;
+        var imageElement = document.querySelector("#article img");
+
+        // 초기 이미지 설정
+        imageElement.src = images[currentImageIndex];
+
+        // 다음 이미지 보여주기
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            imageElement.src = images[currentImageIndex];
+        }
+
+        // 이미지 클릭 시 다음 이미지 보여주기
+        imageElement.addEventListener("click", showNextImage);
+    </script>
+
+</body>
+</html>

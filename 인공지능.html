@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소프트웨어 과제</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* 이미지 스타일링 */
+        #article img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px; /* 이미지 간격을 조절 */
+        }
+    </style>
+</head>
+<body>
+
+    <h1><a href="책 추천 사이트.html">전공 도서 추천</a></h1>
+
+    <div id="grid">
+        <ol>
+            <li><a href="게임개발.html">게임 개발</a></li>
+            <li><a href="빅데이터.html">빅데이터</a></li>
+            <li><a href="인공지능.html">인공지능</a></li>
+            <li><a href="정보보안.html">정보보안</a></li>
+        </ol>
+
+        <div id="article">
+            <h2>인공 지능</h2>
+            <p>인공지능 관련 추천 도서 입니다.</p>
+
+            <!-- 이미지 추가 -->
+            <img src="https://www.hanbit.co.kr/data/editor/20220223121913_megikxoe.jpeg" alt="책 이미지">
+            
+        </div>
+    </div>
+
+    <script>
+        // 이미지 배열
+        var images = [
+        "https://www.hanbit.co.kr/data/editor/20220223121913_megikxoe.jpeg",
+        "https://www.hanbit.co.kr/data/editor/20220223122309_hyogalmy.jpeg",
+        "https://www.hanbit.co.kr/data/editor/20220223122415_ovubkzql.jpeg",
+        "https://www.hanbit.co.kr/data/editor/20220223122602_hunbsmas.jpeg",
+        "https://www.hanbit.co.kr/data/editor/20220223122757_eidpsikp.jpeg",
+        "https://www.hanbit.co.kr/data/editor/20220223122907_onkkriuh.jpeg",
+        "https://www.hanbit.co.kr/data/editor/20220223123112_irdeetdc.jpeg",
+        "https://www.hanbit.co.kr/data/editor/20220223123229_xflbyxzv.jpeg"
+        ];
+
+        var currentImageIndex = 0;
+        var imageElement = document.querySelector("#article img");
+
+        // 초기 이미지 설정
+        imageElement.src = images[currentImageIndex];
+
+        // 다음 이미지 보여주기
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            imageElement.src = images[currentImageIndex];
+        }
+
+        // 이미지 클릭 시 다음 이미지 보여주기
+        imageElement.addEventListener("click", showNextImage);
+    </script>
+
+</body>
+</html>

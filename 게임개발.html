@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소프트웨어 과제</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* 이미지 스타일링 */
+        #article img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px; /* 이미지 간격을 조절 */
+        }
+    </style>
+</head>
+<body>
+
+    <h1><a href="책 추천 사이트.html">전공 도서 추천</a></h1>
+
+    <div id="grid">
+        <ol>
+            <li><a href="게임개발.html">게임개발</a></li>
+            <li><a href="빅데이터.html">빅데이터</a></li>
+            <li><a href="인공지능.html">인공지능</a></li>
+            <li><a href="정보보안.html">정보보안</a></li>
+        </ol>
+
+        <div id="article">
+            <h2>게임개발</h2>
+            <p>게임개발 관련 추천 도서입니다.</p>
+
+            <!-- 이미지 추가 -->
+            <img src="https://image.yes24.com/goods/113791780/L" alt="책 이미지">
+           
+        </div>
+    </div>
+
+    <script>
+        // 이미지 배열
+        var images = [
+            "https://image.yes24.com/goods/113791780/L",
+            "https://image.yes24.com/goods/107025224/L",
+            "https://image.yes24.com/goods/122477832/L",
+            "https://image.yes24.com/goods/106537338/L",
+            "https://image.yes24.com/goods/119243079/L",
+            "https://image.yes24.com/goods/123060834/L",
+            "https://image.yes24.com/goods/71768958/L",
+            "https://image.yes24.com/goods/112207284/L"
+        ];
+
+        var currentImageIndex = 0;
+        var imageElement = document.querySelector("#article img");
+
+        // 초기 이미지 설정
+        imageElement.src = images[currentImageIndex];
+
+        // 다음 이미지 보여주기
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            imageElement.src = images[currentImageIndex];
+        }
+
+        // 이미지 클릭 시 다음 이미지 보여주기
+        imageElement.addEventListener("click", showNextImage);
+    </script>
+
+</body>
+</html>
